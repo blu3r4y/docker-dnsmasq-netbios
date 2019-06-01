@@ -11,6 +11,9 @@ This container bundles [`dnsmasq`](http://thekelleys.org.uk/dnsmasq/doc.html) an
 
 The image is available for `amd64` and `arm32` architectures (e.g. Raspberry Pis).
 
+    docker pull blu3r4y/dnsmasq-netbios:amd64
+    docker pull blu3r4y/dnsmasq-netbios:arm32
+
 ## Quick Start
 
 Put your `dnsmasq` configuration files into some folder - the default is `/srv/dnsmasq/dnsmasq.conf`.
@@ -39,7 +42,9 @@ Start the container, with configuration in volume `/srv/dnsmasq` and the network
         --cap-add=NET_ADMIN --net=host \
         -e "NETBIOS_NETWORK=192.168.0.0/24" \
         --volume /srv/dnsmasq:/etc/dnsmasq \
-        blu3r4y/dnsmasq-netbios:latest
+        blu3r4y/dnsmasq-netbios:amd64
+        
+Use `blu3r4y/dnsmasq-netbios:arm32` for your Raspberry Pi.
 
 After a short amount of time, your NetBIOS hostnames will be available with a `.local` suffix, e.g. try `nslookup SOME-NETBIOS-NAME.local`.
 By default, your network is scanned for NetBIOS names every five minutes.
