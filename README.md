@@ -1,8 +1,10 @@
 # `dnsmasq` + `nbtscan` = ❤️
 
-[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.txt)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=popout-square)](LICENSE.txt)
+[![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
+[![Docker Pulls](https://img.shields.io/docker/pulls/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
 
-This container bundles [`dnsmasq`](http://thekelleys.org.uk/dnsmasq/doc.html) and [`nbtscan`](http://www.unixwiz.net/tools/nbtscan.html), offering you a DNS server which automatically registers Windows NetBIOS host names as well.
+This container bundles [`dnsmasq`](http://thekelleys.org.uk/dnsmasq/doc.html) and [`nbtscan`](http://www.unixwiz.net/tools/nbtscan.html), offering you a DNS server that also automatically registers Windows NetBIOS hostnames.
 
 - `dnsmasq` offers a simple fully-configurable DNS (and DHCP) server
 - `nbtscan` scans the local network for NetBIOS names (i.e. most-likely Windows hosts) and registers their names as `SOME-NETBIOS-NAME.local`
@@ -39,7 +41,7 @@ Start the container, with configuration in volume `/srv/dnsmasq` and the network
         --volume /srv/dnsmasq:/etc/dnsmasq \
         blu3r4y/dnsmasq-netbios:latest
 
-After a short amount of time, your NetBIOS host names will be available with a `.local` suffix, e.g. try `nslookup SOME-NETBIOS-NAME.local`.
+After a short amount of time, your NetBIOS hostnames will be available with a `.local` suffix, e.g. try `nslookup SOME-NETBIOS-NAME.local`.
 By default, your network is scanned for NetBIOS names every five minutes.
 
 ## Advanced Configuration
