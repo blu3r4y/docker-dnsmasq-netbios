@@ -56,7 +56,7 @@ Start the container, with configuration in volume `/srv/dnsmasq` and the network
         
 Use `blu3r4y/dnsmasq-netbios:arm32` for your Raspberry Pi.
 
-After a short amount of time, your NetBIOS hostnames will be available with a `.local` suffix, e.g. try `nslookup SOME-NETBIOS-NAME.local`.
+After some minutes, your NetBIOS hostnames will be available with a `.local` suffix, e.g. try `nslookup SOME-NETBIOS-NAME.local`.
 By default, your network is scanned for NetBIOS names every ten minutes (specify with `NETBIOS_SCAN_INTERVAL`).
 
 ## Advanced Configuration
