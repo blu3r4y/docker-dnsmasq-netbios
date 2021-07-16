@@ -3,7 +3,7 @@
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=popout-square)](LICENSE.txt)
 [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
 [![Docker Pulls](https://img.shields.io/docker/pulls/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
-[![MicroBadger Size](https://img.shields.io/microbadger/image-size/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
+[![Docker Image Size](https://img.shields.io/docker/image-size/blu3r4y/dnsmasq-netbios?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
 
 This container bundles [`dnsmasq`](http://thekelleys.org.uk/dnsmasq/doc.html) and [`nbtscan`](http://www.unixwiz.net/tools/nbtscan.html), offering you a DNS server that also automatically registers [NetBIOS](https://en.wikipedia.org/wiki/NetBIOS) hostnames, which are usually advertised by Windows hosts on the local network.
 
