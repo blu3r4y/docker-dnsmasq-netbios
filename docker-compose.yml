@@ -1,0 +1,18 @@
+version: "3"
+services:
+  dnsmasq-netbios:
+    container_name: dnsmasq-netbios
+    image: "blu3r4y/dnsmasq-netbios"
+    restart: always
+    ports:
+      - "53:53/udp"
+    environment:
+      # all environment variables are optional
+      - NETBIOS_NETWORK=192.168.0.0/24
+      - NETBIOS_NAME_SUFFIX=.local
+      - NETBIOS_SCAN_INTERVAL=600
+    volumes:
+      # change this path to the location of your config folder
+      - "/srv/dnsmasq:/etc/dnsmasq"
+    cap_add:
+      - NET_ADMIN
