@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Starting netbios scanner in the background ..."
-nohup /home/netbios_scanner.sh &
+nohup ./netbios_scanner.sh &
 
-echo "Starting dnsmasq..."
-exec dnsmasq
+echo "Starting dnsmasq in the foreground ..."
+exec dnsmasq -k
