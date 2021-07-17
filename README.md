@@ -1,6 +1,8 @@
 # `dnsmasq` + `nbtscan` = ❤️
 
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=popout-square)](LICENSE.txt)
+[![GitHub Latest Release](https://img.shields.io/github/v/release/blu3r4y/docker-dnsmasq-netbios?style=popout-square)](https://github.com/blu3r4y/docker-dnsmasq-netbios/releases/latest)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/blu3r4y/docker-dnsmasq-netbios/build-container-images?style=popout-square)](https://github.com/blu3r4y/docker-dnsmasq-netbios/actions)
 [![Docker Pulls](https://img.shields.io/docker/pulls/blu3r4y/dnsmasq-netbios.svg?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
 [![Docker Image Size](https://img.shields.io/docker/image-size/blu3r4y/dnsmasq-netbios?style=popout-square)](https://hub.docker.com/r/blu3r4y/dnsmasq-netbios)
 

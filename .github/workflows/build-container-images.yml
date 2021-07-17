@@ -1,4 +1,4 @@
-name: Build container images
+name: build-container-images
 
 on:
   push:
@@ -16,8 +16,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            blu3r4y/dnsmasq-netbios-multi
-            ghcr.io/blu3r4y/dnsmasq-netbios-multi
+            blu3r4y/dnsmasq-netbios
+            ghcr.io/blu3r4y/dnsmasq-netbios
           tags: |
             type=semver,pattern={{version}}
       - name: Setup QEMU
