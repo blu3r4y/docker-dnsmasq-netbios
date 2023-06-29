@@ -1,18 +1,18 @@
-FROM alpine:3.17.0 AS builder
+FROM alpine:3.18.2 AS builder
 
 RUN apk add alpine-sdk && \
     wget http://www.unixwiz.net/tools/nbtscan-source-1.0.35.tgz && \
     tar zxvf nbtscan-source-1.0.35.tgz && \
     make
 
-FROM alpine:3.17.0
+FROM alpine:3.18.2
 
 WORKDIR /home
 
 COPY --from=builder /nbtscan /usr/bin/nbtscan
 COPY run.sh netbios_scanner.sh ./
 
-RUN apk add --no-cache "dnsmasq=2.87-r0" && \
+RUN apk add --no-cache "dnsmasq=2.89-r5" && \
     echo "addn-hosts=/etc/hosts.netbios" > /etc/dnsmasq.conf && \
     echo "conf-dir=/etc/dnsmasq,*.conf" >> /etc/dnsmasq.conf && \
     chmod 755 /usr/bin/nbtscan && \
